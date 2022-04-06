@@ -1,0 +1,16 @@
+
+footer{
+	background-color: $darkColor;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	img{
+		text-decoration: none;
+		height: $rem-2;
+		width: $w-20;
+		margin-top: $rem-2;
+		
+	}
+}

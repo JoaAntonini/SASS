@@ -1,0 +1,118 @@
+
+#nosotros{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		line-height: $rem-2;
+		top: 0;
+		table{
+			display:flex;
+			justify-content: center;
+			flex-direction: row;
+			h3{
+				font-style: $fontStyle;
+			}
+		}
+
+		section{
+		display:  flex; 
+		flex-direction: column;
+		align-items: center;
+		margin: $rem-1;
+		padding: $rem-1;
+			h1{
+			font-weight: $fontXl;
+			font-size: $textMd;
+			margin: $rem-1;
+			text-decoration: underline;
+			}
+			h2{
+			font-weight: $fontXl;
+			font-size: $textMd;
+			margin: $rem-1;
+			text-decoration: underline;
+			}
+		}
+
+}
+
+.nosotrosAlign{
+	display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-top: 0rem;
+    height: 30rem;
+    align-items: center;
+    width: 97%;
+}
+
+.textoNosotros{
+	background-color: $tableColor;
+	margin: $rem-0;
+    padding: $rem-1;
+}
+
+#formulario{
+	margin: $rem-1;
+    padding: $rem-1;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;	
+	border: none;
+	h3{
+		width: $w-100;
+		height: $rem-3;
+		margin-top: $remneg-5;
+		font-size:$rem-2;
+		text-align: center;	
+		padding: $rem-1;
+		background-color: $formTitleColor;
+	}
+
+	form{
+		 display: flex;
+		 background-color: $formColor;
+		 border: none;
+		 fieldset{
+		 		 border: none;
+		 	legend{
+		 		width: $w-60;
+    			height:  $rem-3;
+    			font-size:  $rem-1;
+    			text-align: $l;
+    			margin-top:  $rem-1;
+    			padding:  $rem-0;
+    			border: none;
+    			font-weight: bold;
+		 	}
+		 	div{
+		 		margin: $rem-1;
+		 		border: none;
+		 		text-align: $l;
+		 	}
+		 }
+	}
+	
+}
+
+#Contacto{
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	width: $w-100;
+	article{
+		width: $w-100;
+		textarea{
+			width: $w-100;
+			height: $mg-10;
+		}
+	}
+	.botonera{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	}
+
+}
