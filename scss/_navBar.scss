@@ -1,52 +1,16 @@
 
 //nesting
 
+nav{
+	transition: all 4s;
+}
 
-.botonera{
-	background-color: $navColor;
+.fondoIndex{
+	background-color: map-get($map:$paletaGrises, $key:'uno');
 	background: linear-gradient(90deg, rgba(2,2,29,0.5945728633250176) 1%, rgba(197,185,203,0.13799023027179624) 34%, rgba(55,54,54,1) 96%);
-	margin-right: $rem-3;
-	padding: $rem-1 $rem-3;
-	position: sticky;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: $w-100;
-	@media (min-width:768px){
-			padding: $rem-1;
-			position: sticky;
-			top: 0;
-			display:  flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			height: $mg-10;
-	}
-	ul{
-		display: flex;
-		flex-direction: column;
-		margin-top: $rem-1;
-		list-style: none;
-		@media (min-width: 768px){
-			display: flex;
-			flex-direction: row;
-			align-items: flex-end;
-			margin-left: $mg-50;
-			margin-top: $remneg-4;
-		}
-		li{
-			margin-left: $rem-2; 
-			a{
-				color:$keyColor;
-				font-size: $textSm;		
-				text-decoration: none;			
-				&:hover{
-					font-weight:$fontXl; 
-					color: $secondcolor;
-				}
-			}
-		}
-	}
+	@media (min-width: 280px){
+				width: $w-100;
+					}
 }
 
 .logoMargin{
@@ -59,13 +23,27 @@
 	margin-left: $rem-3;
 	height: $w-60;
 	margin-top:  $rem-1;
+	@media (min-width: 280px){
+					width: $w-80;
+	}
 	@media (min-width: 768px){
-					width: $w-30;
+					width: $w-45;
 					display:  flex;
 					align-items: flex-start;
 					margin-left: $rem-2;
 					box-sizing: border-box;
-					margin-top:  $remneg-1;
-					}
+					margin-top:  $rem-0;
+	}
 }
 
+.opciones{
+			font-size: 2rem;
+			/*text-align: right;*/
+		}	
+
+		.opciones:hover{
+				transform: translateY(-4px);
+				cursor: pointer;
+				transition: all 2s;
+				font-size: 3rem;
+		}	

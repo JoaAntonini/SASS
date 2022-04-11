@@ -1,24 +1,17 @@
 
 #nosotros{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		line-height: $rem-2;
-		top: 0;
-		table{
-			display:flex;
-			justify-content: center;
-			flex-direction: row;
-			h3{
-				font-style: $fontStyle;
-			}
+	@include flexRow(flex, row, center);
+	flex-wrap: wrap;
+	line-height: $rem-2;
+	top: 0;
+	table{
+		@include flexRow(flex, row, center);
+		h3{
+			font-style: $fontStyle;
 		}
-
-		section{
-		display:  flex; 
-		flex-direction: column;
-		align-items: center;
+	}
+	section{
+		@include flexColumn(flex, column, center);
 		margin: $rem-1;
 		padding: $rem-1;
 			h1{
@@ -33,86 +26,136 @@
 			margin: $rem-1;
 			text-decoration: underline;
 			}
-		}
-
-}
-
-.nosotrosAlign{
-	display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-    margin-top: 0rem;
-    height: 30rem;
-    align-items: center;
-    width: 97%;
-}
-
-.textoNosotros{
-	background-color: $tableColor;
-	margin: $rem-0;
-    padding: $rem-1;
-}
-
-#formulario{
-	margin: $rem-1;
-    padding: $rem-1;
-    display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-decoration: none;	
-	border: none;
-	h3{
-		width: $w-100;
-		height: $rem-3;
-		margin-top: $remneg-5;
-		font-size:$rem-2;
-		text-align: center;	
-		padding: $rem-1;
-		background-color: $formTitleColor;
 	}
-
-	form{
-		 display: flex;
-		 background-color: $formColor;
-		 border: none;
-		 fieldset{
-		 		 border: none;
-		 	legend{
-		 		width: $w-60;
-    			height:  $rem-3;
-    			font-size:  $rem-1;
-    			text-align: $l;
-    			margin-top:  $rem-1;
-    			padding:  $rem-0;
-    			border: none;
-    			font-weight: bold;
-		 	}
-		 	div{
-		 		margin: $rem-1;
-		 		border: none;
-		 		text-align: $l;
-		 	}
-		 }
+	.videoForm{
+		@include flexRow(flex, row, center);
+		flex-wrap: wrap;
+		width: $w-100;
+		padding: $rem-0;
+		margin-top: $rem-2;
+		@media (min-width: 768px){
+			margin-top: $rem-4;
+		}
+		@media (min-width: 992px){
+			justify-content: flex-start;
+			margin-left: $rem-2;
+		}
+	}
+	.videoTitle	{
+		color:  $keyColor;
+		font-weight: $fontXl;
+		margin-top: $remneg-3;
+		font-size: $textMd;
+		padding: $rem-0;
+		text-align: center;
+		line-height: $rem-4;
+	}
+	.nosotrosAlign{
+		@include flexColumn(flex, column, center);
+   		margin-left:$rem-1;
+   		margin-top: $rem-0;
+    	width: $w-100;
+	}
+	.textCenter{
+		text-align: center;
+	}
+	.titleFormat{
+		margin-top: $rem-0;
+		padding: $rem-05;
+		color: $keyColor;
+		font-weight: $fontXl;
+		font-size: $textMd;
+		@media (min-width: 1192px){
+			font-size: $textLg;
+			width: $w-90;
+		}
+	}
+	.textoNosotros{
+		font-weight: $fontMd;
+		background-color: map-get($map:$paletaGrises, $key:'tres');;
+		margin: $rem-0;
+    	padding: $rem-1;
+    	@media (min-width: 768px){
+				font-size: $textSmh;
+				width: $w-80
+		}
+    	@media (min-width: 1192px){
+				font-size: $textMd;
+				width: $w-90;
+		}
 	}
 	
 }
 
-#Contacto{
-	display: flex;
-	flex-direction: column;
-	font-weight: bold;
+#formulario{
+	h3{
+		background-color: $bgMedium;
+		width: $w-100;
+		margin-top: $rem-0;
+		padding: $rem-05;
+		color:  $keyColor;
+		font-weight: $fontXl;
+		font-size:$textMd;
+		text-align: center;
+	}
+	.formularioForm{
+		@include flexColumn(flex, column, stretch);
+		width: $w-70;
+		margin: $rem-05;
+		padding: $rem-05;
+		font-size: $rem-1;
+		background-color: $formColor;
+	}
+	legend{
+		@include texto($w-100,$textMd, center, $formTitleColor);
+	}
+}
+
+#escribinos{
+	@include flexColumn(flex, column, center);
+	label{
+		font-size: $textSmh}
+	input{
+		width: $w-100;
+		font-size: $textSmh;
+	}
+}
+
+#contacto{
+	@include flexColumn(flex, column, center);
 	width: $w-100;
+	.formularioForm2{
+		@extend .formularioForm;
+		border-radius: 1rem;
+	}
+	legend{
+		@include texto($w-100,$textSmh, center, $formTitleColor);
+		font-weight: $fontMd;
+	}
+}
+
+#ayuda{
+	@include flexColumn(flex, column, center);
+	.formularioForm3{
+		@extend .formularioForm;
+		border: $colorBorder;
+		border-radius: $rem-105 $rem-05 $rem-3 $rem-05;
+		height: 20rem;
+	}
 	article{
 		width: $w-100;
+		label{
+			font-size:$textSmh;
+			text-align: center;	
+			font-weight: $fontMd;
+			background-color:$formTitleColor;
+		}
 		textarea{
-			width: $w-100;
-			height: $mg-10;
+				width: $w-100;
+				height: $mg-10;
 		}
 	}
 	.botonera{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	@include flexRow(flex, row, space-between);
 	}
-
 }

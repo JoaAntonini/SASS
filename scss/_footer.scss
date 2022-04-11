@@ -1,16 +1,132 @@
 
-footer{
-	background-color: $darkColor;
-	text-decoration: none;
+.footer{
+	background: map-get($map: $paletaGrises, $key:'cinco');
+	box-sizing: border-box;
+	width: $w-100;
+	font-size:$rem-105;
+	text-align: left;
+	padding: $rem-2;
+	overflow: hidden;
+	@media (max-width: 768px){
+		padding: $rem-3;
+	}
+	@media (max-width: 1024px){
+		font: $fontBold $rem-105 $fontMain;
+	}
+	.footerLeft{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		float: left;
+		@media (max-width: 768px){
+			float: none;
+			margin-bottom: $rem-3;
+		}
+		h3{
+			color:  $whiteColor;
+			text-decoration: underline;
+		}
+	}
+	.footerLinks{
+	color:  $whiteColor;
+	margin: $rem-0;
+	padding: $rem-1;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	img{
-		text-decoration: none;
-		height: $rem-2;
-		width: $w-20;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: $w-100;
+	font-size:$textSmt; 
+		@media (min-width: 480px){
+			flex-wrap: nowrap;
+			margin: $rem-1;
+			font-size:$textSmh; 
+	}	
+		a{
+			display: flex;
+			flex-direction: row;
+			text-decoration: none;
+			color:  $whiteColor;
+		}
+	}
+	.footerIcons{
+		@extend .footerLinks;
 		margin-top: $rem-2;
-		
+		justify-content: space-evenly;
+		a{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: $rem-305;
+			height: $rem-305;
+			cursor: pointer;
+			background-color:  #33383b;
+			border-radius: $rem-05;
+			font-size: $rem-2;
+			color:  $whiteColor;
+			text-align: center;
+			line-height: $rem-305;
+			margin-right: $rem-03;
+			margin-bottom: $rem-05;
+		}
+	}
+	.footerRight{
+		float: right;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: 768px){
+			float: none;
+			max-width: $rem-3;
+			margin: $rem-0 auto;
+		}
+		p{
+			display: flex;
+			flex-direction: column;
+			color:  $whiteColor;
+		}
+		form{
+			@media (max-width: 768px){
+				margin-top: $rem-3;
+				display: block;
+			}
+			textarea{
+				display: block;
+				border-radius: $rem-03;
+				box-sizing: border-box;
+				background-color:  $backgroundTxt;
+				box-shadow: $rem-0 $rem-03 $rem-0 $rem-0 $Shadowcolor1;
+				border: none;
+				resize: none;
+				font: inherit;
+				font-size: $rem-105;
+				font-weight: $fontMd;
+				color:  $textcolor;
+				width: $mg-40;
+				padding: $rem-105;
+				height: $mg-10;
+				margin-bottom: $rem-2;
+				@media (max-width: 1024px){
+					width: $mg-25;
+				}
+			}
+		}
+			button{
+				border-radius: $rem-05;
+				background-color: $backgroundBtnSend;
+				color: $whiteColor;
+				border: $rem-0;
+				padding: $rem-05 $rem-4;
+				font-weight: $fontBold;
+				float: right;
+				@media (max-width: 768px){
+					float: none;
+				}
+				@media (max-width: 1024px){
+					padding: $rem-1 $rem-305;
+				}
+			}
 	}
 }
+
+

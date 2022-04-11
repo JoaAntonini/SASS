@@ -1,3 +1,6 @@
+
+
+
 //variables 
 
 $mainColor:rgba(80,199,199,0.8);
@@ -9,14 +12,38 @@ $tableColor: #889999;
 $formTitleColor: rgba(77, 84, 84, 0.9);
 $formColor: #889999;
 $backgroundImage: url(../img/fondo.jpg);
+$bgDark: rgba(224, 224, 209, 0.7);
+$bgLight: rgba(221, 235, 235, 0.9);
+$bgMedium: #E6E8E8;
+$colorBorder:#5F9EA0;
+$colorfooter:#444;
+$whiteColor: white ;
+$backgroundBtnSend: #33383b;
+$backgroundTxt:#1f2022;
+$Shadowcolor1: rgba(255, 255, 255, 0.1);
+$textcolor: #d1d2d2;
+
+$paletaGrises:(
+	'uno': rgb(2,2,29), //fondo index
+	'dos': rgba(77, 84, 84, 0.9),//title
+	'tres': #889999,//texto nosotros
+	'cuatro': rgba(221, 235, 235, 0.9),//bglight
+	'cinco': #444,//footer
+	'seis':#212529,//dark color
+	);
+
 
 //sizing
-
+$w-140:140%;
+$w-120:120%;
 $w-100:100%;
+$w-90:90%;
 $w-80:80%;
 $w-75:75%;
-$w-60: 60%;
+$w-70:70%;
+$w-60:60%;
 $w-50:50%;
+$w-45:45%;
 $w-30:30%;
 $w-25:25%;
 $w-20:20%;
@@ -28,16 +55,20 @@ $remneg-3: -3rem;
 $remneg-2: -2rem;
 $remneg-1: -1rem;
 $rem-0: 0rem;
+$rem-03: 0.3rem;
 $rem-05: 0.5rem;
 $rem-1: 1rem;
 $rem-105: 1.5rem;
 $rem-2: 2rem;
 $rem-3: 3rem;
+$rem-305: 3.5rem;
 $rem-4: 4rem;
+$rem-5: 5rem;
 
 //medidas extremas
 $mg-10: 10rem;
 $mg-25: 25rem;
+$mg-40: 40rem;
 $mg-50: 50rem;
 $mg-100: 100rem;
 $mgneg-25: -25rem;
@@ -53,5 +84,15 @@ $c: center;
 
 
 
+html{
+	font-size: 62.5%;
+}
+
+
+body {
+	background-image: url(../img/fondo.jpg);
+	background-repeat: repeat;
+	overflow-x: hidden;
+}
 
 

@@ -1,6 +1,11 @@
 @import "_reset";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/font-awesome/scss/font-awesome";
+@import "../node_modules/font-awesome/scss/_variables";
 @import "_commons";
 @import "_fonts";
+@import "_mixin";
+@import "_multimedia";
 @import "_navBar";
 @import "_content";
 @import "_footer";
